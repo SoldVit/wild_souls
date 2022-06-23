@@ -1,0 +1,72 @@
+<header class="header">
+  <div class="header__top">
+    Free shipping in Greece for Wild orders over 50 euros!
+  </div>
+
+  <nav class="menu">
+    <div class="container">
+      <div class="menu__inner">
+        <ul class="menu__items">
+          <li class="menu__item">
+            <a class="menu__link wrapper-click status" href="@link-products">
+              Products
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link wrapper-click status" href="@link-who">
+              Who we are
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link wrapper-click status" href="@link-concept">
+              Concept Store
+            </a>
+          </li>
+        </ul>
+
+        <ul class="menu__items">
+          <li class="menu__item">
+            <a class="menu__link wrapper-click status" href="@link-recipes">
+              Recipes
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link wrapper-click status" href="#">
+              Log In
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link wrapper-click status" href="#">
+              Cart (0)
+            </a>
+          </li>
+          <li class="menu__item">
+            <form class="menu__form status" action="#" name="cортировка">
+              <label class="menu__label">
+                <select class="menu__select" name="language">
+                  <option value="value">EN</option>
+                  <option value="value">EN</option>
+                  <option value="value">EN</option>
+                </select>
+              </label>
+            </form>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </nav>
+
+  @include('../components/_burger.html', {
+  'class-btn': 'burger'
+  })
+
+  <a class="logo" href="index.html">
+    <svg class="logo__img">
+      <use xlink href="../../images/sprite.svg#logo"></use>
+    </svg>
+  </a>
+
+</header>

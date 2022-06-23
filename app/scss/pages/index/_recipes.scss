@@ -1,0 +1,105 @@
+.recipes {
+  background-color: $pink;
+  padding-bottom: 150px;
+
+  @include max-w($xl) {
+    padding-bottom: 75px;
+  }
+
+  &__box {
+    margin: 0 150px 0 auto;
+    max-width: 670px;
+  }
+
+  &__title {
+    margin-bottom: 28px;
+  }
+
+  &__text {
+    margin-bottom: 100px;
+    max-width: 500px;
+    display: inline-block;
+
+    @include max-w($sm) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+
+    @include max-w($xl) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    text-transform: uppercase;
+
+    @include max-w($xxl) {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      @include max-w($xl) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      @include max-w($sm) {
+          &:not(:last-child) {
+        margin-right: 0;
+          }
+      }
+
+    }
+
+    &--bottom {
+      align-self: flex-end;
+
+      @include max-w($xl) {
+        align-self: flex-start;
+      }
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 43px;
+
+    @include max-w($xl) {
+      order: 2;
+    }
+  }
+
+  &__characteristic {
+    display: block;
+    font-weight: 700;
+    font-size: 42px;
+    max-width: 338px;
+    margin-top: 12px;
+    text-transform: none;
+    line-height: 1.2;
+
+    @include max-w($xl) {
+      min-height: 100px;
+      margin-bottom: 10px;
+    }
+
+    @include max-w($lg) {
+      font-size: 30px;
+    }
+  }
+
+  &__taste {
+
+    @include max-w($xl) {
+      margin-bottom: 20px;
+      order: 1;
+      display: block;
+    }
+  }
+}

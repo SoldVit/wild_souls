@@ -1,0 +1,22 @@
+@include('blocks/_head.html', {
+  'title': 'WILD SOULS'
+})
+@include('blocks/_header.html', {
+  'link-products': '#catalog',
+  'link-who': '#catalog-reviews',
+  'link-concept': '#concept',
+  'link-recipes': '#recipes'
+
+})
+<main class="main">
+@include('pages/index/_hero.html')
+@include('pages/index/_catalog.html')
+@include('pages/index/_concept.html')
+@include('pages/index/_halva.html')
+@include('pages/index/_treasures.html')
+@include('pages/index/_recipes.html')
+</main>
+
+@include('blocks/_footer.html')
+@include('blocks/_mobile-menu.html')
+@include('blocks/_footer-scripts.html')

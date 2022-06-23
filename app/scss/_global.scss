@@ -1,0 +1,157 @@
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  color: $black;
+  font-family: roboto, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  background-color: $orange
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  &--big {
+    max-width: 1470px;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 85px;
+  line-height: 1.1;
+
+  @include max-w($xl) {
+    font-size: 65px;
+  }
+
+  @include max-w($sm) {
+    font-size: 45px;
+  }
+}
+
+.logo {
+  object-fit: contain;
+  object-position: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 22%);
+  transition: fill 0.3s;
+  width: 121px;
+  height: 161px;
+
+  @include max-h ($xs) {
+    width: 67px;
+    height: 65px;
+  }
+
+  &:hover {
+    fill: $white;
+  }
+
+  &__img {
+    width: 121px;
+    height: 161px;
+
+    @include max-h ($xs) {
+      width: 72px;
+      height: 87px;
+    }
+  }
+}
+
+.btn {
+  font-size: 13px;
+  line-height: 1.85;
+  color: $white;
+  background-color: $black;
+  padding: 0 64px;
+  text-transform: uppercase;
+  transition: color 0.3s,
+    background-color 0.3s;
+  display: inline-block;
+
+  &:hover {
+    color: black;
+    background-color: $white;
+  }
+}
+
+.status {
+  transition: color 0.3s;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.wrapper-click {
+  position: relative;
+
+  &::after {
+    @include pseudo;
+    height: 44px;
+    min-width: 44px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.animation-left {
+  animation-name: catalog-left;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+
+  @keyframes catalog-left {
+    from {
+      transform: rotate(30deg);
+    }
+
+    to {
+      transform: rotate(0);
+    }
+  }
+}
+
+.animation-right {
+  animation-name: catalog-right;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+
+  @keyframes catalog-right {
+    from {
+      transform: rotate(-30deg);
+    }
+
+    to {
+      transform: rotate(0);
+    }
+  }
+}

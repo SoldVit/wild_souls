@@ -1,0 +1,168 @@
+.header {
+  position: relative;
+  z-index: 1;
+
+  &__top {
+    padding: 11px 0;
+    background-color: $black;
+    color: $white;
+    text-align: center;
+
+    @include max-w($sm) {
+      font-size: 12px;
+    }
+  }
+}
+
+.menu {
+  margin-top: 76px;
+  font-size: 15px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  transition: padding 0.4s,
+    transform 0.3s;
+  animation-name: header;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+  z-index: 10;
+
+  @include max-w($lg) {
+    display: none;
+  }
+
+  @keyframes header {
+
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  &--scroll {
+    transition: padding 0.4s;
+    padding: 5px;
+    background-color: #76351885;
+    animation-name: header-scroll;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+    margin-top: 0;
+    z-index: 10;
+    color: $white;
+
+      @include max-w($lg) {
+        display: none;
+      }
+
+    @keyframes header-scroll {
+
+      from {
+        transform: scale3d(1, 1, 1);
+      }
+
+      50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+
+      to {
+        transform: scale3d(1, 1, 1);
+      }
+    }
+
+    .menu__link:hover {
+      color: $black;
+    }
+
+    .jq-selectbox__select {
+      color: $white;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    position: relative;
+  }
+
+  &__item {
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-right: 42px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form {
+    position: absolute;
+    right: -130px;
+    font-size: 14px;
+    top: -5px;
+
+    @include max-w($xl) {
+      right: -47px;
+    }
+  }
+}
+
+.jq-selectbox {
+
+  &__select {
+    height: 30px;
+    padding: 0 45px 0 10px;
+    border: transparent;
+    border-bottom-color: transparent;
+    border-radius: 0;
+    background: transparent;
+    color: $black;
+    box-shadow: none;
+    text-shadow: none;
+    transition: color 0.3s;
+
+    &:hover {
+      background: transparent;
+      color: $white;
+    }
+
+    &:active {
+      background: transparent;
+      box-shadow: none;
+      border: none;
+    }
+  }
+
+  &__trigger {
+    display: none;
+  }
+
+  &.focused .jq-selectbox__select {
+    border: none;
+  }
+
+  &__dropdown {
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  & li:hover {
+    background-color: transparent;
+    color: #fff;
+  }
+}

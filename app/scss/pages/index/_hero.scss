@@ -1,0 +1,115 @@
+.hero {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 211px;
+  height: calc(100vh - 46px);
+  position: relative;
+
+  @include max-h ($xs) {
+    padding-top: 110px;
+  }
+
+  &__container {
+    height: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__title.title {
+    font-weight: 400;
+    max-width: 560px;
+    flex-grow: 1;
+    text-align: center;
+
+    @include max-w($sm) {
+      max-width: 378px;
+    }
+
+    @include max-h ($xs) {
+      font-size: 40px;
+    }
+  }
+
+  &__message {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 78px;
+    padding: 11px 10px 10px 24px;
+    align-items: center;
+    max-width: 392px;
+    height: 57px;
+    align-self: flex-end;
+    margin: 0 30px 76px 0;
+
+    @include max-h ($xs) {
+      padding: 4px 10px 4px 24px;
+      height: 43px;
+    }
+  }
+
+  &__inner {
+    margin-right: 148px;
+
+    @include max-w($sm) {
+      margin-right: 10px;
+    }
+  }
+
+    &__span {
+      color: $white;
+      font-size: 12px;
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+
+    &__btn {
+      text-transform: uppercase;
+      font-size: 13px;
+      background-color: $pink;
+      padding: 0 22px;
+      line-height: 35px;
+      border-radius: 17.5px;
+    }
+
+    &__link {
+      position: relative;
+      width: 79px;
+      height: 79px;
+      border-radius: 50%;
+      background-color: $black;
+      margin: -61px auto 7px;
+
+      @include max-w($sm) {
+        width: 60px;
+        height: 60px;
+      }
+
+      @include max-h($xs) {
+        width: 60px;
+        height: 60px;
+      }
+
+      &::after {
+        @include pseudo;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('../../images/icons/hero/vector.svg');
+        width: 20px;
+        height: 15px;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+      }
+    }
+  }

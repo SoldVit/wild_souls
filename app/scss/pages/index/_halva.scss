@@ -1,0 +1,133 @@
+.halva {
+  background-color: $pink;
+  margin-left: -15px;
+
+  &__wrapper {
+    display: flex;
+
+    @include max-w($xl) {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    padding: 90px 0 63px 165px;
+    background-color: $blue;
+    border-radius: 0px 220px 0px 0px;
+    max-width: 830px;
+    margin-right: 15px;
+
+    @include max-w($xl) {
+      margin-bottom: 25px;
+    }
+
+    @include max-w($lg) {
+      padding: 70px 0 40px 65px;
+      max-width: 445px;
+      margin-right: 0;
+    }
+
+    @include max-w($xs) {
+      padding: 70px 0 40px 15px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 49px;
+
+    @include max-w($lg) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__subtitle {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 62px;
+
+    @include max-w($lg) {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 21px;
+    max-width: 245px;
+  }
+
+  &__price {
+    margin-bottom: 45px;
+
+    span {
+      font-size: 21px;
+    }
+  }
+
+  &__btn.btn {
+    border-radius: 40px;
+    padding: 0 77px;
+
+    @include max-w($xs) {
+      padding: 0 45px;
+    }
+  }
+
+  &__img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 332px;
+    height: 385px;
+
+    @include max-w($lg) {
+      display: none;
+    }
+  }
+
+  &__love {
+    background-color: $red;
+    padding: 65px 58px 55px;
+    max-width: 445px;
+  }
+
+  &__svg {
+    width: 147px;
+    height: 327px;
+    margin: 0 auto 39px;
+    display: block;
+  }
+
+  &__love-subtitle {
+    font-weight: 700;
+    font-size: 42px;
+    margin-bottom: 36px;
+    text-align: center;
+    line-height: 1.2;
+
+    @include max-w($lg) {
+      font-size: 35px;
+    }
+  }
+
+  &__love-btn.btn {
+    padding: 16px 76px;
+    border-radius: 40px;
+    margin: 0 auto;
+    display: block;
+    font-size: 14px;
+
+    @include max-w($sm) {
+      padding: 0 76px;
+    }
+
+    @include max-w($sm) {
+      padding: 0 45px;
+    }
+  }
+}
